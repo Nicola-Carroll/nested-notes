@@ -21,6 +21,11 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "cypress": "^8.7.0",
+    "jest": "^27.3.1",
     "webpack-dev-server": "^3"
+  },
+  "scripts": {
+    "test": "cypress open --project ./spec"
   }
 }

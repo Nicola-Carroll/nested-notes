@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 
 group :development, :test do
+  gem 'cypress-on-rails', '~> 1.11'
+  gem 'rspec-rails', '~> 4.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -46,7 +48,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 4.0'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
