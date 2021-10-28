@@ -27,8 +27,8 @@ jobs:
   # this splits our tests across multiple containers.
     parallelism: 3
     docker:
-      environment: # add POSTGRES environment variables.
-        POSTGRES_DB: nested_notes_test
+      - image: circleci/ruby:2.6.3-stretch-node
+
     # environment variables specific to Ruby/Rails, applied to the primary container.
     environment: 
       RAILS_ENV: test
@@ -43,7 +43,7 @@ jobs:
       # up before we run operations on the database.
       - run:
           name: Wait for DB
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+          command: dockerize -wait tcp://localhost:3000 -timeout 1m
       - run:
           name: Database setup
           command: bundle exec rails db:schema:load --trace
