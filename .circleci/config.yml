@@ -27,6 +27,10 @@ jobs:
           command: |
             bundle install
             bundle exec rspec
+          environment:
+            RAILS_ENV: test
+            DB_HOST: postgres
+            DB_NAME: nested_notes_test
   
   # test:
   # # this splits our tests across multiple containers.
