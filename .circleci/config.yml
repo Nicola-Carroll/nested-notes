@@ -35,20 +35,21 @@ jobs:
     # A series of steps to run, some are similar to those in "build".
     steps:
       - checkout
-      - ruby/install-deps
-      - node/install-packages:
-          pkg-manager: yarn
-          cache-key: "yarn.lock"
+      # - node/install-packages:
+      #     pkg-manager: yarn
+      #     cache-key: "yarn.lock"
       # Here we make sure that the secondary container boots
       # up before we run operations on the database.
-      - run:
-          name: Wait for DB
-          command: dockerize -wait tcp://localhost:3000 -timeout 1m
-      - run:
-          name: Database setup
-          command: bundle exec rails db:schema:load --trace
+      # - run:
+      #     name: Wait for DB
+      #     command: dockerize -wait tcp://localhost:3000 -timeout 1m
+      # - run:
+      #     name: Database setup
+      #     command: bundle exec rails db:schema:load --trace
       # Run rspec in parallel
-      - ruby/rspec-test
+      - run:
+          name: Run RSpec
+          command: rspec
 
 
 
