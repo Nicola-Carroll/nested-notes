@@ -8,6 +8,10 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# Viewport tag to control dimensions and scaling %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%# adding JavaScript pack to application header makes all JS code available and executes code in Index.jsx when app is run %>
+    <%= javascript_pack_tag 'Index' %>
   </head>
 
   <body>
