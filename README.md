@@ -19,9 +19,9 @@ As this is my first project with no added time pressure, my main aim in this pro
 
 ## Initial domain model
 
-Initially, I wanted to build this project in Ruby on Rails because of how easy it is to get a simple app up and running quickly. Each project I've worked on so far has been in a new stack, so I wanted to use a framework I was familiar with to just focus on my best practices.
+Initially, I wanted to build this project in Ruby on Rails because of how easy it is to get a simple app up and running quickly. Each project I've worked on so far has been in a new stack, so I wanted to use a framework I was familiar with to just focus on my best practices as opposed to learning something new.
 
-Since relational databases are better suited for non-heirarachical data, I was aware a stack which uses a NoSQL DB might be more appropriate for Nested Notes than RoR. I then discovered the nested set model for storing heirarchical, and a [gem built for RoR](https://github.com/collectiveidea/awesome_nested_set) to make handling nested sets easy. Since there's no real need of scalability on this app this is the route I'm planning to start off with.
+Since relational databases are better suited for non-heirarachical data, I was aware a stack which uses a NoSQL DB might be more appropriate for Nested Notes than RoR. I then discovered the nested set model for storing heirarchical, and a [gem built for RoR](https://github.com/collectiveidea/awesome_nested_set) to make handling nested sets easy. Since there's no real need for scalability on this app this is the route I'm planning to start off with.
 
 The diagrams below show the nested set model demostrated on a collection of 6 notes about holidaying in Europe, with their corresponding node indexes.
 
