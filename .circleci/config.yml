@@ -49,7 +49,8 @@ jobs:
       # Run rspec in parallel
       - run:
           name: Run RSpec
-          command: rspec
+          command: |
+            bundle exec rspec
 
 
 
