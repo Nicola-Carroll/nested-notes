@@ -13,6 +13,12 @@ jobs:
   build:
     docker:
       - image: 'cimg/ruby:3.0.2-node'
+      - environment:
+          POSTGRES_DB: nested_notes_test
+        image: 'circleci/postgres:9.5-alpine'
+    environment:
+      RAILS_ENV: test
+      PGHOST: 127.0.0.1
     executor: ruby/default
     steps:
       - checkout
@@ -24,7 +30,7 @@ jobs:
             gem install bundler
       - run:
           name: Wait for DB
-          command: dockerize -wait tcp://localhost:3000 -timeout 1m
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run:
           name: Database setup
           command: bundle exec rails db:schema:load --trace
@@ -33,10 +39,6 @@ jobs:
           command: |
             bundle install
             bundle exec rspec
-          environment:
-            RAILS_ENV: test
-            DB_HOST: postgres
-            DB_NAME: nested_notes_test
   
   # test:
   # # this splits our tests across multiple containers.
