@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+#nested set implementation for active record
+gem 'awesome_nested_set', '~> 3.4'
 
 group :development, :test do
   gem 'cypress-on-rails', '~> 1.11'
