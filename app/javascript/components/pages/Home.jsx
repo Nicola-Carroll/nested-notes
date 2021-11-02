@@ -1,5 +1,7 @@
 import React from "react";
 
+import ContinueButton from "../components/shared/continue-button";
+
 export default () => (
   <div className="vw-100 vh-100 primary-color d-flex align-items-center justify-content-center">
     <div className="jumbotron jumbotron-fluid bg-transparent">
@@ -9,6 +11,7 @@ export default () => (
           A place to store your notes
         </p>
         <hr className="my-4" />
+        <ContinueButton/>
       </div>
     </div>
   </div>

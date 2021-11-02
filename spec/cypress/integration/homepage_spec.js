@@ -3,8 +3,15 @@ describe("Homepage", function () {
   //   cy.app("clean"); // have a look at cypress/app_commands/clean.rb
   // });
 
-  it("contains app name", function () {
+  beforeEach(() => {
     cy.visit(`/`);
+  });
+
+  it("contains app name", function () {
     cy.contains("Nested Notes");
+  });
+
+  it("contains a continue button", function () {
+    cy.get("#continue-button").should("exist");
   });
 });
