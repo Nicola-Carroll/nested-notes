@@ -7,11 +7,9 @@ export default () => (
     <div className="jumbotron jumbotron-fluid bg-transparent">
       <div className="container secondary-color">
         <h1 className="display-4">Nested Notes</h1>
-        <p className="lead">
-          A place to store your notes
-        </p>
+        <p className="lead">A place to store your notes</p>
         <hr className="my-4" />
-        <ContinueButton/>
+        <ContinueButton page={"notes"} />
       </div>
     </div>
   </div>

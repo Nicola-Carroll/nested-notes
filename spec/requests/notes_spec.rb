@@ -4,7 +4,6 @@ RSpec.describe 'Notes', type: :request do
   describe 'GET /new' do
     it 'returns http success' do
       get '/notes/new'
-      p new_note_url
       expect(response).to have_http_status(:success)
     end
   end
@@ -19,6 +18,13 @@ RSpec.describe 'Notes', type: :request do
   describe 'GET /update' do
     it 'returns http success' do
       get '/notes/update'
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe 'GET /notes' do
+    it 'returns http success' do
+      get '/notes'
       expect(response).to have_http_status(:success)
     end
   end

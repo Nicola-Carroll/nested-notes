@@ -14,4 +14,9 @@ describe("Homepage", function () {
   it("contains a continue button", function () {
     cy.get("#continue-button").should("exist");
   });
+
+  it("navigates to notes page when button is clicked", function () {
+    cy.get("#continue-button").click();
+    cy.location("pathname").should("eq", "/notes");
+  });
 });
